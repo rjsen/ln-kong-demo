@@ -1,0 +1,25 @@
+_format_version: "1.1"
+services:
+- connect_timeout: 60000
+  host: httpbin.org
+  name: httpbin
+  path: /anything
+  port: 80
+  protocol: http
+  read_timeout: 50000
+  retries: 5
+  write_timeout: 60000
+  routes:
+  - hosts:
+    - example.com
+    id: f6d78c06-85b2-453e-be1a-5e23bcbc39b6
+    path_handling: v0
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    strip_path: true
+    https_redirect_status_code: 426
+consumers:
+- username: rjsen
