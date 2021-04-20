@@ -21,5 +21,16 @@ services:
     regex_priority: 0
     strip_path: true
     https_redirect_status_code: 426
+  plugins:
+  - name: basic-auth
+    config:
+      anonymous: null
+      hide_credentials: false
+    enabled: true
+    protocols:
+    - grpc
+    - grpcs
+    - http
+    - https
 consumers:
 - username: rjsen
